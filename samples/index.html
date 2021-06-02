@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Dompteur Audio Samples</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/fontawesome-all.min.css" rel="stylesheet" media="screen">
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/mdb.min.css" rel="stylesheet" media="screen">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png?v=vMdg08k5Pk">
+  <link rel="manifest" href="ico/site.webmanifest?v=vMdg08k5Pk">
+  <link rel="mask-icon" href="ico/safari-pinned-tab.svg?v=vMdg08k5Pk" color="#5bbad5">
+  <link rel="shortcut icon" href="ico/favicon.ico?v=vMdg08k5Pk">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-config" content="ico/browserconfig.xml?v=vMdg08k5Pk">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+
+
+    <br>
+
+
+    <div class="container" id="intro">
+      <h1 class="display-4">D<font style="font-variant: small-caps">ompteur</font> Audio Samples</h1>
+
+    
+
+      <br>
+
+      <div class="row">
+        <div class="col-sm-8">
+
+            <!-- Player -->
+            <div class="card" id="player">
+                <div class="card-body">
+                    <div class="col-12" style="min-height: 60px;">
+                      <h4 class="card-title"><span id="typed" class="m-0" style="font-variant:small-caps;"></span></h4>
+                    </div>
+                    <hr>
+
+                    <div id="waveform"></div>
+                </div>
+                <div class="card-footer text-center">
+                    <div class="row justify-content-between;" style="align-items: center">
+                        <div style="margin-right:auto; padding-left:15px;">
+                            <button type="button" id="playBtn" class="btn btn-md rgba-blue-strong" disabled onclick="playFile();"><i class="fa fa-play"></i> Play</button>
+                        </div>
+                        <div style="margin-left:auto; padding-right:15px;">
+                            <button type="button" id="stopBtn" class="btn btn-md rgba-red-strong" disabled onclick="stopFile();"><i class="fa fa-stop"></i> Stop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Player End -->
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+      <div class="container" id="attack">
+          <div class="row">
+            <div class="col-sm-12">
+                                 <!-- Player -->
+                <div class="card" id="player2">
+                    <div class="card-body">
+                        <div class="col-12" style="min-height: 60px;">
+                            <h4 class="card-title"><span id="typed2" class="m-0" style="font-variant:small-caps;"></span></h4>
+                        </div>
+                        <hr>
+
+                        <div id="waveform2"></div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <div class="row justify-content-between;" style="align-items: center">
+                            <div style="margin-right:auto; padding-left:15px;">
+                                <button id="playBtn2" type="button" class="btn btn-md rgba-blue-strong" disabled onclick="playFile2();"><i class="fa fa-play"></i> Play</button>
+                            </div>
+                            <div style="margin-left:auto; padding-right:15px;">
+                                <button id="stopBtn2" type="button" class="btn btn-md rgba-red-strong" disabled onclick="stopFile2();"><i class="fa fa-stop"></i> Stop</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    <br>
+    <br>
+
+                <!-- Player End -->  
+                <div class="table-responsive text-nowrap" id="example">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                       <th scope="row" class="janheadline">Speech 1</th>
+                        <td>
+                          <button type="button" class="btn btn-outline-success" onclick="loadAudio('0')"> Original</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-dark" onclick="loadAudio('1')"> Baseline</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('2')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 0</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('3')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 6</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('4')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 12</button>
+                        </td>
+                      </tr>
+                      <tr>
+                       <th scope="row" class="janheadline">Speech 2</th>
+                        <td>
+                          <button type="button" class="btn btn-outline-success" onclick="loadAudio('5')"> Original</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-dark" onclick="loadAudio('6')"> Baseline</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('7')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 0</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('8')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 6</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('9')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 12</button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                       <th scope="row" class="janheadline">Music 1</th>
+                        <td>
+                          <button type="button" class="btn btn-outline-success" onclick="loadAudio('10')"> Original</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-dark" onclick="loadAudio('11')"> Baseline</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('12')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 0</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('13')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 6</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('14')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 12</button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                       <th scope="row" class="janheadline">Music 2</th>
+                        <td>
+                          <button type="button" class="btn btn-outline-success" onclick="loadAudio('15')"> Original</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-dark" onclick="loadAudio('16')"> Baseline</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('17')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 0</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('18')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 6</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('19')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 12</button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                       <th scope="row" class="janheadline">Birds 1</th>
+                        <td>
+                          <button type="button" class="btn btn-outline-success" onclick="loadAudio('20')"> Original</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-dark" onclick="loadAudio('21')"> Baseline</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('22')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 0</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('23')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 6</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('24')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 12</button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                       <th scope="row" class="janheadline">Birds 2</th>
+                        <td>
+                          <button type="button" class="btn btn-outline-success" onclick="loadAudio('25')"> Original</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-dark" onclick="loadAudio('26')"> Baseline</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('27')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 0</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('28')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 6</button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-outline-danger" onclick="loadAudio('29')"> D<font style="font-variant: small-caps">ompteur</font> &Phi; = 12</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+         
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+
+<br>
+<br>
+
+<!-- Footer -->
+ <button id="myhiddenbutton" style="display: none;"></button>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/mdb.min.js"></script>
+  <script src="js/wavesurfer/wavesurfer.min.js"></script>
+  <script src="js/typed.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/audio.js"></script>
+  <script>
+    $('.navbar-collapse a').click(function () {
+      $(".navbar-collapse").collapse('hide');
+    });
+  </script>
+  <script>
+    $(".smooth-scroll").on('click', 'a', function (event) {
+      event.preventDefault();
+      var elAttr = $(this).attr('href');
+      var offset = ($(this).attr('data-offset') ? $(this).attr('data-offset') : 0);
+      var fixedTop = $('.navbar.fixed-top');
+      if (fixedTop && fixedTop.length) {
+        offset = fixedTop.outerHeight();
+      }
+      $('body,html').animate({
+        //scrollTop: $(elAttr).offset().top - offset
+        scrollTop: $(elAttr).offset().top - 56
+      }, 700);
+    });
+  </script>
+
+</body>

@@ -1,0 +1,10 @@
+colorama==0.4.3
+ipykernel==5.3.4
+matplotlib==3.3.2
+pydng==1.1.2
+pydub==0.24.1
+samplerate==0.1.0
+scipy==1.5.2
+soundfile==0.10.3.post1
+torchaudio==0.6.0
+tqdm==4.48.2

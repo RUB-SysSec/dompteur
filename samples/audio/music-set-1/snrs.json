@@ -1,0 +1,8 @@
+{
+    "utt": "002",
+    "baseline": "27.17",
+    "attack_0dB": "26.51",
+    "attack_6dB": "21.42",
+    "attack_12dB": " 1.80",
+    "anchor": "-5.04"
+}

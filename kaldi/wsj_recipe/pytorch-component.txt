@@ -1,0 +1,1 @@
+<PytorchComponent> <InputDim> 256</PytorchComponent>
