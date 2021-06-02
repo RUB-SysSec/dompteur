@@ -25,7 +25,7 @@ For testing, we also included a small dataset with speech samples (`datasets/spe
 We implemented DOMPTEUR based on [Kaldi ASR](https://kaldi-asr.org) and created a Dockerfile with all necessary tools to train the system and run the attacks. It can be build via
 
 ```
-git clone git@github.com:dompteur/artifacts.git ~/dompteur
+git clone git@github.com:RUB-SysSec/dompteur.git ~/dompteur
 cd ~/dompteur; docker build -t dompteur .
 ```
 
