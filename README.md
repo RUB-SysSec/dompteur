@@ -12,7 +12,7 @@ This is the code repository accompaning our USENIX Security '21 paper [Dompteur:
 
 ## Audio Samples
 
-As an example for our countermeasure, we uploaded the audio files used for our user study. These samples can be found at [https://github.com/rub-syssec/dompteur/samples](https://github.com/rub-syssec/dompteur/samples).
+As an example for our countermeasure, we uploaded the audio files used for our user study. These samples can be found at [https://rub-syssec.github.io/dompteur/](https://rub-syssec.github.io/dompteur/).
 
 ## Models and Datasets
 
