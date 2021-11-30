@@ -129,3 +129,19 @@ optional arguments:
 ```
 
 More details on the conversion can be found in `hearing_thresholds` and `kaldi/wsj_recipe/psycho/psycho.py`.
+
+### Update November'21
+
+We additionally included all necessary components in a separate container (cf. `standalone-psychoacoustic-filtering`).
+
+You can build the container with:
+```
+cd ~/dompteur/standalone-psychoacoustic-filtering; 
+docker build -t standalone-psychoacoustic-filtering .
+```
+
+The `psycho.py` script can then be used for the psychoacoustic filtering:
+```
+docker run -it --rm standalone-psychoacoustic-filtering /bin/bash
+python3 /root/psycho.py
+```
